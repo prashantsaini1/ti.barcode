@@ -6,6 +6,23 @@ Lets you process 1D/2D barcodes.
 ## System Requirements
 Barcode module has support for iOS 4 and later. The module does not support iOS versions prior to iOS 4.
 
+## Important Note
+Before using this module, your app will need to ask for Camera Permissions, to do this add a key-value pair in your apps's tiapp.xml file as mentioned below:
+
+***tiapp.xml***
+```xml
+<ios>
+    <plist>
+        <dict>
+            <key>NSCameraUsageDescription</key>
+            <string>Allow to use camera to scan barcodes and QR codes?</string>
+            
+            ....
+        </dict>
+    </plist>
+</ios>
+```
+
 ## Warning when Updating to Barcode v1.5
 With the 1.5 update to the Barcode Module, several breaking changes have been made. These changes were made to bring
 the iOS and Android modules in to full parity. When upgrading to 1.5, you will need to consider the following:
